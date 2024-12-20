@@ -33,5 +33,9 @@ class File_handler
   end
 
   def load
+    file = File.open('save.txt')
+    data = JSON.load(file)
+    file.close
+    data
   end
 end
