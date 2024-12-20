@@ -2,9 +2,9 @@ class Secret_word
   attr_accessor :secret_word, :correct_guesses, :incorrect_guesses
 
   def initialize(words, data)
-    self.secret_word = data.empty? ? pick_random_word(words) : data.secret_word
-    self.correct_guesses = data.empty? ? [] : data.correct_guesses
-    self.incorrect_guesses = data.empty? ? [] : data.incorrect_guesses
+    self.secret_word = data.empty? ? pick_random_word(words) : data['secret_word']
+    self.correct_guesses = data.empty? ? [] : data['correct_guesses']
+    self.incorrect_guesses = data.empty? ? [] : data['incorrect_guesses']
   end
 
   def pick_random_word(words)

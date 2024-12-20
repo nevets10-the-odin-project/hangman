@@ -8,6 +8,7 @@ puts 'load game? (y/N)'
 do_load = gets.downcase.chomp
 
 data = do_load == 'y' ? file_handler.load : {}
+p data
 
 secret_word = Secret_word.new(words, data)
 game = Game.new(file_handler, secret_word, data)

@@ -7,7 +7,7 @@ class Game
     self.file_handler = file_handler
     self.secret_word = secret_word
     self.current_turn = 1
-    self.current_turn = data.current_turn unless data.empty?
+    self.current_turn = data['current_turn'] unless data.empty?
   end
 
   def start_game
