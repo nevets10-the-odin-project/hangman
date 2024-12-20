@@ -1,7 +1,10 @@
 class Secret_word
   attr_accessor :secret_word
 
-  def pick_random_word
+  def pick_random_word(words)
+    rng = Random.new
+    filtered_words = words.filter { |word| word.chomp.length.between?(5, 12) }
+    filtered_words[rng.rand(0..(filtered_words.length - 1))]
   end
 
   def print_secret_word
