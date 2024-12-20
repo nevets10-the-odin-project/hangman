@@ -7,5 +7,8 @@ class Game
   end
 
   def start_game
+    words = file_handler.open_file('words.txt')
+    secret_word.pick_random_word(words)
+    puts secret_word.secret_word
   end
 end
