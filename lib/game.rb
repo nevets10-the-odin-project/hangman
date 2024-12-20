@@ -14,6 +14,7 @@ class Game
 
     GUESS_COUNT.times do |turn_num|
       take_turn(turn_num)
+      break if secret_word.secret_word.all? { |letter| secret_word.correct_guesses.include?(letter) }
     end
 
     puts "The word was #{secret_word.secret_word.join.chomp}!"

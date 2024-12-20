@@ -4,7 +4,7 @@ class Secret_word
   def pick_random_word(words)
     rng = Random.new
     filtered_words = words.filter { |word| word.chomp.length.between?(5, 12) }
-    self.secret_word = filtered_words[rng.rand(0..(filtered_words.length - 1))].split('')
+    self.secret_word = filtered_words[rng.rand(0..(filtered_words.length - 1))].chomp.split('')
     self.correct_guesses = []
     self.incorrect_guesses = []
   end
