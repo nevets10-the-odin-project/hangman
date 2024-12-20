@@ -31,7 +31,7 @@ class Game
     guess = gets.downcase.chomp
 
     if guess == 'save'
-      file_handler.save
+      file_handler.save(self)
       puts 'saved!'
       guess = gets.downcase
     end

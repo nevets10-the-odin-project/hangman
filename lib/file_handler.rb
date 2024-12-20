@@ -1,3 +1,5 @@
+require 'json'
+
 class File_handler
   attr_accessor :file_name
 
@@ -15,7 +17,13 @@ class File_handler
     words
   end
 
-  def save
+  def to_json(obj)
+  end
+
+  def save(game)
+    file = File.open('save.txt', 'w')
+    to_json(game)
+    file.close
   end
 
   def load
