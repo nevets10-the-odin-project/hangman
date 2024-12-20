@@ -23,7 +23,7 @@ class Game
   def take_turn(turn_num)
     secret_word.print_secret_word
     puts ''
-    puts "Guess ##{turn_num + 1}"
+    puts "Guess ##{turn_num + 1} of #{GUESS_COUNT}"
     guess = gets[0]
     secret_word.check_guess(guess)
   end
