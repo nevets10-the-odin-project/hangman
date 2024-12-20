@@ -21,6 +21,7 @@ class Game
   end
 
   def take_turn(turn_num)
+    system 'clear -x'
     secret_word.print_secret_word
     puts ''
     puts "Guess ##{turn_num + 1} of #{GUESS_COUNT}"
