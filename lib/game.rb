@@ -27,7 +27,15 @@ class Game
     puts "Guess ##{turn_num + 1} of #{GUESS_COUNT}"
     puts "CORRECT: #{secret_word.correct_guesses}"
     puts "WRONG: #{secret_word.incorrect_guesses}"
-    guess = gets.downcase[0]
-    secret_word.check_guess(guess)
+    puts 'Type save to save the game'
+    guess = gets.downcase.chomp
+
+    if guess == 'save'
+      file_handler.save
+      puts 'saved!'
+      guess = gets.downcase
+    end
+
+    secret_word.check_guess(guess[0])
   end
 end
