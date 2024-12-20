@@ -3,6 +3,14 @@ Project: Hangman
 
 ---
 
+## Post-project review
+
+I think this project went a lot smoother than the previous ones. My brainstorming ideas were a lot closer to what I ended up with, which is awesome!
+
+I don't know how long I'll struggle with context switching between different languages... I keep using JavaScript syntax when calling hash keys.
+
+---
+
 ## Brainstorming
 
 ### File handler class
