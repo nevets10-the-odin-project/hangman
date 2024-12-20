@@ -16,12 +16,11 @@ class Secret_word
     end
   end
 
-  def check_guess
-  end
-
-  def update_correct
-  end
-
-  def update_incorrect
+  def check_guess(guess)
+    if secret_word.include?(guess)
+      correct_guesses << guess
+    else
+      incorrect_guesses << guess
+    end
   end
 end

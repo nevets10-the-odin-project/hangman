@@ -21,5 +21,7 @@ class Game
     secret_word.print_secret_word
     puts ''
     puts "Guess ##{turn_num + 1}"
+    guess = gets[0]
+    secret_word.check_guess(guess)
   end
 end
