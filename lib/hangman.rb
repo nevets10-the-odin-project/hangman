@@ -5,7 +5,7 @@ require_relative 'secret_word'
 file_handler = File_handler.new
 words = file_handler.open_file('words.txt')
 puts 'load game? (y/N)'
-do_load = gets
+do_load = gets.chomp
 
 data = do_load.downcase == 'y' ? file_handler.load : {}
 
