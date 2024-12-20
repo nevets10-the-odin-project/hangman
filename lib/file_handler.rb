@@ -17,12 +17,18 @@ class File_handler
     words
   end
 
-  def to_json(obj)
+  def to_json(game)
+    JSON.dump({
+                current_turn: game.current_turn,
+                secret_word: game.secret_word.secret_word,
+                correct_guesses: game.secret_word.correct_guesses,
+                incorrect_guesses: game.secret_word.incorrect_guesses
+              })
   end
 
   def save(game)
     file = File.open('save.txt', 'w')
-    to_json(game)
+    file.puts to_json(game)
     file.close
   end
 
