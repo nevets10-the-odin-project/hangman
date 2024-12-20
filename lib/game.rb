@@ -25,6 +25,7 @@ class Game
     secret_word.print_secret_word
     puts ''
     puts "Guess ##{turn_num + 1} of #{GUESS_COUNT}"
+    puts "CORRECT: #{secret_word.correct_guesses}"
     puts "WRONG: #{secret_word.incorrect_guesses}"
     guess = gets.downcase[0]
     secret_word.check_guess(guess)
