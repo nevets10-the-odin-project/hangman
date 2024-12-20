@@ -1,7 +1,7 @@
 class Game
   attr_accessor :file_handler, :secret_word
 
-  GUESS_COUNT = 8
+  GUESS_COUNT = 12
 
   def initialize(file_handler, secret_word)
     self.file_handler = file_handler
@@ -15,6 +15,8 @@ class Game
     GUESS_COUNT.times do |turn_num|
       take_turn(turn_num)
     end
+
+    puts "The word was #{secret_word.secret_word.join.chomp}!"
   end
 
   def take_turn(turn_num)
